@@ -1,0 +1,28 @@
+<!-- ADD THIS INSIDE YOUR HEADING TAG (<head>...</head>) -->
+
+
+
+    <script language="javascript">
+    document.onmousedown=disableclick;
+    status="Right Click Disabled";
+    Function disableclick(event)
+    {
+      if(event.button==2)
+       {
+         alert(status);
+         return false;    
+       }
+    }
+    </script>
+
+
+
+
+<!-- ADD THIS INSIDE YOUR BODY TAG (<body>...</body>) -->
+
+
+
+    <body oncontextmenu="return false">
+    ...
+    </body>
+
