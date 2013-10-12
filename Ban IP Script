@@ -2,7 +2,7 @@
 
 // Ban IP Address Script
 
-//Enter list of banned ips, separated by a comma;
+//Enter anned ips separated by a comma.
 
 var bannedips=["00.00.00.00", "01.01.01.01"]
 
@@ -12,7 +12,9 @@ var handleips=bannedips.join("|")
 handleips=new RegExp(handleips, "i")
 
 if (ip.search(handleips)!=-1){ 
+// You can change the message given to banned users in the line below. ONLY EDIT BETWEEN THE ""
 alert("The IP address you are using has been banned from this site! You will be redirected.")
+// You can change where the banned user will be redirected to in the line below. ONLY EDIT BETWEEN THE ""
 window.location.replace("http://www.google.com")
 }
 
