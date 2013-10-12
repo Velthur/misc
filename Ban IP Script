@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+// Ban IP Address Script
+
+//Enter list of banned ips, separated by a comma;
+
+var bannedips=["00.00.00.00", "01.01.01.01"]
+
+var ip = '<!--#echo var="REMOTE_ADDR"-->'
+
+var handleips=bannedips.join("|")
+handleips=new RegExp(handleips, "i")
+
+if (ip.search(handleips)!=-1){ 
+alert("The IP address you are using has been banned from this site! You will be redirected.")
+window.location.replace("http://www.google.com")
+}
+
+</script>
